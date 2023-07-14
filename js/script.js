@@ -34,4 +34,5 @@ function clearFields() {
   document.getElementById("number4").value = "";
 
   document.getElementById("result").value = "";
+  document.getElementById("aproveOrNot").value = "";
 }
