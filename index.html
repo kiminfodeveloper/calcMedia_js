@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Média</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Média</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+    <!-- TITULO -->
+    <h1>Calculo de média</h1>
+    <!-- FORMULARIO -->
+    <form id="mediaForm">
+      <label for="valor1">Primeira Nota:</label>
+      <input type="number" step="any" id="valor1" required />
+
+      <label for="valor2">Segunda Nota:</label>
+      <input type="number" step="any" id="valor2" required />
+
+      <label for="valor3">Terceira Nota:</label>
+      <input type="number" step="any" id="valor3" required />
+
+      <label for="valor4">Quarta Nota:</label>
+      <input type="number" step="any" id="valor4" required />
+
+      <button type="submit">Calcular</button>
+      <button type="butto" onclick="limparCampos()">Limpar</button>
+
+      <!-- RESULTADO -->
+      <input type="text" id="resultado" readonly />
+    </form>
+  </body>
+</html>
