@@ -1,33 +1,37 @@
 // evitando apagar o form
-document
-  .getElementById("mediaForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+function calculateAverage() {
+  //  atribuindo os valores
+  var numberOne = parseFloat(document.getElementById("number1").value);
+  console.log("First note: " + numberOne);
+  var numberTwo = parseFloat(document.getElementById("number2").value);
+  console.log("Second note: " + numberTwo);
+  var numberThree = parseFloat(document.getElementById("number3").value);
+  console.log("Third note: " + numberThree);
+  var numberFour = parseFloat(document.getElementById("number4").value);
+  console.log("Fourth note: " + numberFour);
 
-    //  atribuindo os valores
-    var valor1 = parseFloat(document.getElementById("valor1").value);
-    console.log("valor da primeira nota: " + valor1);
-    var valor2 = parseFloat(document.getElementById("valor2").value);
-    console.log("valor da segunda nota: " + valor2);
-    var valor3 = parseFloat(document.getElementById("valor3").value);
-    console.log("valor da terceira nota: " + valor3);
-    var valor4 = parseFloat(document.getElementById("valor4").value);
-    console.log("valor da quarta nota: " + valor4);
+  // criando o calculo da media
+  var media = (numberOne + numberTwo + numberThree + numberFour) / 4;
+  console.log("Average note: " + media);
 
-    // criando o calculo da media
-    var media = (valor1 + valor2 + valor3 + valor4) / 4;
-    console.log("valor da media nota: " + media);
+  // mostrando o resultado
+  document.getElementById("result").value = media;
 
-    // mostrando o resultado
-    document.getElementById("resultado").value = media;
-  });
+  // validando valor maior ou menor que a media
+
+  if (media >= 6) {
+    document.getElementById("aproveOrNot").value = "Approve";
+  } else {
+    document.getElementById("aproveOrNot").value = "Disapproved";
+  }
+}
 
 // função para limpar dados nos campos
-function limparCampos() {
-  document.getElementById("valor1").value = "";
-  document.getElementById("valor2").value = "";
-  document.getElementById("valor3").value = "";
-  document.getElementById("valor4").value = "";
+function clearFields() {
+  document.getElementById("number1").value = "";
+  document.getElementById("number2").value = "";
+  document.getElementById("number3").value = "";
+  document.getElementById("number4").value = "";
 
-  document.getElementById("resultado").value = "";
+  document.getElementById("result").value = "";
 }

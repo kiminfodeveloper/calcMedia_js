@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calcular Média</title>
+    <title>Calculate Average</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/script.js"></script>
   </head>
@@ -13,31 +13,32 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Média</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <!-- TITULO -->
-    <h1>Calculo de média</h1>
+    <h1>Calculate Average</h1>
     <!-- FORMULARIO -->
-    <form id="mediaForm">
-      <label for="valor1">Primeira Nota:</label>
-      <input type="number" step="any" id="valor1" required />
+    <div id="mediaForm">
+      <label for="number1">First note:</label>
+      <input type="number" step="any" id="number1" required />
 
-      <label for="valor2">Segunda Nota:</label>
-      <input type="number" step="any" id="valor2" required />
+      <label for="number2">Second note:</label>
+      <input type="number" step="any" id="number2" required />
 
-      <label for="valor3">Terceira Nota:</label>
-      <input type="number" step="any" id="valor3" required />
+      <label for="number3">Third note:</label>
+      <input type="number" step="any" id="number3" required />
 
-      <label for="valor4">Quarta Nota:</label>
-      <input type="number" step="any" id="valor4" required />
+      <label for="number4">Fourth note:</label>
+      <input type="number" step="any" id="number4" required />
 
-      <button type="submit">Calcular</button>
-      <button type="butto" onclick="limparCampos()">Limpar</button>
+      <button type="button" onclick="calculateAverage()">Calculate</button>
+      <button type="button" onclick="clearFields()">Clear</button>
 
       <!-- RESULTADO -->
-      <input type="text" id="resultado" readonly />
-    </form>
+      <input type="text" id="result" readonly />
+      <input type="text" id="aproveOrNot" readonly />
+    </div>
   </body>
 </html>
